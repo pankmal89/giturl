@@ -1,7 +1,8 @@
 ---
-- hosts: localhost
+- name: playbook for contol group
+  hosts: all
   become: true
   tasks:
-         - name: creating group
-           raw: cgcreate -a root:root -t root:root -g cpuacct,memory,pids:ansible_runner
-          
+    - name: creating control group
+      raw: cgcreate -a root:root -t root:root -g cpuacct,memory,pids:ex447_stats
+
