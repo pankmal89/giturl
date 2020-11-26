@@ -1,9 +1,6 @@
 ---
-- name: install file
+- name: playbook for control group
   hosts: all
   become: true
   tasks:
-        - name: calling package
-          yum: 
-                name: httpd
-                state: latest      
+    - raw: cgcreate -a root:root -t root:root -g cpuacct,memory,pids:ex447_stats
