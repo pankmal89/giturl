@@ -1,6 +1,9 @@
 ---
-- name: playbook for control group
+- name: install httpd
   hosts: all
-  become: true
+  become: yes
   tasks:
-    - raw: cgcreate -a root:root -t root:root -g cpuacct,memory,pids:ex447_stats
+    - name: install htpd
+      yum:
+          name: httpd
+          state: latest
