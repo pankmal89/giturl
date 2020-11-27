@@ -1,8 +1,0 @@
----
-- name: playbook for contol group
-  hosts: all
-  become: true
-  tasks:
-    - name: creating control group
-      raw: cgcreate -a root:root -t root:root -g cpuacct,memory,pids:ex447_stats
-
