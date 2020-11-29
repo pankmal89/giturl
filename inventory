@@ -1,9 +1,7 @@
 [practice]
 workstation
 
-[local]
-local.localhost
-
+localhost
 
 #[dev
 #node3]
